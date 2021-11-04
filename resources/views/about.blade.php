@@ -1,15 +1,7 @@
-@extends('layouts.app')
-
-
-@section('title_doc')О нас @endsection
-
-
+@extends('layouts.main')
 @section('content')
-    <h1>О нас</h1>
+        <div>This is about page</div>
+        <div class="alert alert-light" role="alert">
+            A simple light alert—check it out!
+        </div>
 @endsection
-
-@section('aside')
-    @parent
-    <p>Дополнительный текст в О нас</p>
-@endsection
-

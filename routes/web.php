@@ -14,15 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
-})->name('home');
+    return view('welcome');
+});
 
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
+Route::get('/posts', 'PostController@index')->name('post.index');
+Route::get('/posts/create', 'PostController@create');
+Route::post('/posts/create', 'PostController@store')->name('post.store');
+Route::get('/posts/{post}', 'PostController@show')->name('post.show');
 
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
+Route::get('/posts/update', 'PostController@update');
+Route::get('/posts/delete', 'PostController@delete');
+Route::get('/posts/first_or_create', 'PostController@firstOrCreate');
 
-Route::post('/contact/submit', 'App\Http\Controllers\ContactController@submit')->name('contact-form');
+Route::get('/main', 'MainController@index')->name('main.index');
+Route::get('/contacts', 'ContactController@index')->name('contact.index');
+Route::get('/about', 'AboutController@index')->name('about.index');

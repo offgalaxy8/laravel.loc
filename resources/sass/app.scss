@@ -1,13 +1,8 @@
-body {
-    background-color: #fff;
-}
-.sidebar {
-    background: #fff;
-    padding: 20px 15px;
-}
-.container.mt-5 {
-    background: #fff;
-}
-.home-text h3 {
-    color: #098eb6;
-}
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
